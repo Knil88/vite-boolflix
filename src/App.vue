@@ -23,7 +23,7 @@ getContent(){
 
   
     if(this.store.searchText != "" ){
-         myUrl += `${this.store.searchText} `
+         myUrl += `${store.apiOriginal}+${store.apiTitle}+${this.store.searchText} `
       }
       
     axios
@@ -36,7 +36,7 @@ getContent(){
 
       //quando definiamo con methods dobbiamo ricordarci sempre di aggiungere this.nomevariabile
 
-      this.store.characterList = res.data.results;
+      store.ContentList = res.data.results;
     })
 
     //Con catch diciamo che ci sono stati degli errori 
@@ -70,7 +70,7 @@ getContent(){
 <template>
     <header>
       BOOLFLIX
-    <AppSearch/>
+    <AppSearch  @search="getContent()"/>
     
     </header>
     <main>

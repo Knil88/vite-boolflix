@@ -39,7 +39,7 @@ import {store} from './store'
  
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 
     #card-container{
         display: flex;
