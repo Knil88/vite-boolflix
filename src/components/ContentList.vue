@@ -28,20 +28,10 @@ import {store} from './store'
              
            
 
-            <div class="big-card">
-                <img src="https://www.themoviedb.org/t/p/w500/1g0K701Z1SYJ83A34XvvfnbacTw.jpg" alt="">
-                <div id="Titolo">
-                    Titolo
-                </div>
-                <div id="titolo-originale">
-                    Titolo Originale
-                </div>
-                <div id="lingua">
-                    Lingua
-                </div>
-                <div id="voto">
-                    Voto
-                </div>
+            <div class="big-card"  v-for="content in store.ContentList" 
+            :key="content.id">
+              <SingleContent :info="content" />
+                
             
             </div>
       
