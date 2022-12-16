@@ -6,7 +6,7 @@
 
 <template>
     <div class="big-card">
-                <img :src="info.backdrop_path" alt="">
+                <img :src="`https://api.themoviedb.org/3/movie/popular${info.poster_path}`" alt="">
                 <div id="Titolo">
                     {{info.title}}
                 </div>
