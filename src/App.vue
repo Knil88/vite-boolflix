@@ -13,7 +13,8 @@ export default{
 
 // Creiamo il metodo per richiamre la nostra contentList
 
-getContent(){
+  methods: {
+    getContent(){
     
     // Creiamo la variabile myUrl che richiama store.apiUrl
     
@@ -46,6 +47,7 @@ getContent(){
     }
     )
    
+  },
   },
   //mettiamo tutti i file importati in components
 

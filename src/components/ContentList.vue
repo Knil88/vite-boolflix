@@ -28,9 +28,9 @@ import {store} from './store'
              
            
 
-            <div class="big-card"  v-for="content in store.ContentList" 
-            :key="content.id">
-              <SingleContent :info="content" />
+            <div class="big-card" v-for="(element,index) in store.ContentList"
+            :key="element.id">
+              <SingleContent  :info="element" />
                 
             
             </div>
@@ -55,7 +55,7 @@ import {store} from './store'
         .big-card{
             text-align: center;
             margin: 13px;
-            width: 13%;
+            width: 30%;
           
           
             

@@ -1,50 +1,28 @@
 <script>
-    props:["info"]
+ export default{
+    props:["info"],
+ }
 </script>
 
 <template>
-    <div class="big-card"  v-for="content in store.ContentList" 
-            :key="content.id">
-                <img src="https://www.themoviedb.org/t/p/w500/1g0K701Z1SYJ83A34XvvfnbacTw.jpg" alt="">
+    <div class="big-card">
+                <img :src="info.backdrop_path" alt="">
                 <div id="Titolo">
-                    Titolo
+                    {{info.title}}
                 </div>
                 <div id="titolo-originale">
-                    Titolo Originale
+                    {{info.original_title}}
                 </div>
                 <div id="lingua">
-                    Lingua
+                    {{info.original_language}}
                 </div>
                 <div id="voto">
-                    Voto
+                    {{info.vote_average}}
                 </div>
             
             </div>
 </template>
 
 <style lang="scss">
-#card-container{
-    display: flex;
-   
-    flex-wrap: wrap;
-    margin: auto;
-    width:100%;
-    color: white;
-    background: rgb(2,0,36);
-   
-     
 
-    .big-card{
-        text-align: center;
-        margin: 13px;
-        width: 13%;
-      
-      
-        
-    }
-
-}
-img{
-    max-width: 100%;
-}
 </style>
