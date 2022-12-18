@@ -1,6 +1,14 @@
 <script>
  export default{
     props:["info"],
+   data() {
+    return {
+        
+    }
+   },
+   methods: {
+
+   },
  }
 </script>
 
@@ -10,12 +18,14 @@
                 <div class="info-title">
                     <div id="Titolo">
                         {{info.title}}
+                        {{ info.name }}
                     </div>
                     <div id="titolo-originale">
                         {{info.original_title}}
+                        {{ info.original_name }}
                     </div>
-                    <div id="lingua">
-                        {{info.original_language}}
+                    <div >
+                        <img id="lingua" :src="`https://countryflagsapi.com/svg/it`" alt="">
                     </div>
                     <div id="voto">
                         {{info.vote_average}}
@@ -26,5 +36,7 @@
 </template>
 
 <style lang="scss">
-
+    #lingua{
+       max-width: 25px;
+    }
 </style>
