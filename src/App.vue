@@ -18,13 +18,13 @@ export default{
     
     // Creiamo la variabile myUrl che richiama store.apiUrl
     
-    let myUrl = this.store.apiUrl
+    let myUrl = store.apiUrl
 
     //Poniamo la condizione che se searchText è diverso  da stringa vuota aggiungiamo ad myUrl lo status che richiam il valore di store.searchText
 
   
-    if(this.store.searchText != "" ){
-         myUrl += `${store.apiOriginal}+${store.apiTitle}+${this.store.searchText} `
+    if(store.searchText != "" ){
+         myUrl = `https://api.themoviedb.org/3/search/movie?${store.apiKey}&language=it&query=${store.searchText} `
       }
       
     axios
@@ -34,8 +34,6 @@ export default{
     
     //Con then diciamo che tutto è andato per il verso giusto 
     .then(res =>{
-
-      //quando definiamo con methods dobbiamo ricordarci sempre di aggiungere this.nomevariabile
 
       store.ContentList = res.data.results;
     })

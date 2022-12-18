@@ -21,20 +21,13 @@ import {store} from './store'
 <template>
   
    
-        <section id="card-container">
+        <section id="card-container" >
           
-            
-           
-             
-           
-
-            <div class="big-card" v-for="(element,index) in store.ContentList"
-            :key="element.id">
-              <SingleContent  :info="element" />
-                
-            
+          
+            <div class="big-card"  v-for="(element,index) in store.ContentList">
+                <SingleContent  :info="element" />
             </div>
-      
+            
         </section>
  
 </template>
@@ -54,16 +47,17 @@ import {store} from './store'
 
         .big-card{
             text-align: center;
-            margin: 13px;
-            width: 30%;
-          
+            width: 19%;
+            
           
             
         }
 
     }
     img{
-        max-width: 100%;
+        max-width: 230px;
+        margin: 10px;
     }
+   
    
 </style>
