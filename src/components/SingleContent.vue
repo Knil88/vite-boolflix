@@ -3,12 +3,42 @@
     props:["info"],
    data() {
     return {
-        
+        data() {
+        return {
+            arrayFlags: [
+                {
+                    img: "..flag/Flag_of_Italy.svg.png",
+                    lang: "it"
+                },
+                {
+                    img: "..flag/flag-en.png",
+                    lang: "en"
+                },
+                {
+                    img:"..flag/flag-ja.png",
+                    lang: "ja"
+                },
+               
+               
+                {
+                    img: "..flag/rainbow.png",
+                    lang: ""
+                }
+            ]
+        }
+    },
     }
    },
-   methods: {
-
-   },
+   computed:{
+   getFlags(){
+    for (let i = 0; i < this. arrayFlags.length; i++) {
+                if (this. arrayFlags[i].lang.includes(this.info.original_language)) {
+                    return this. arrayFlags[i].img
+                }
+            }
+            return this. arrayFlags[this. arrayFlags.length - 1].img
+        },
+   }
  }
 </script>
 
@@ -25,7 +55,7 @@
                         {{ info.original_name }}
                     </div>
                     <div >
-                        <img id="lingua" :src="`https://countryflagsapi.com/svg/it`" alt="">
+                        <img :src="getFlags" alt="">
                     </div>
                     <div id="voto">
                         {{info.vote_average}}

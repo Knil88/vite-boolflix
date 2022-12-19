@@ -19,12 +19,12 @@ export default{
     // Creiamo la variabile myUrl che richiama store.apiUrl
     
     let myUrl = store.apiUrl
-     
+      
     //Poniamo la condizione che se searchText è diverso  da stringa vuota aggiungiamo ad myUrl lo status che richiam il valore di store.searchText
 
   
     if(store.searchText != "" ){
-         myUrl = `https://api.themoviedb.org/3/search/?${store.apiKey}&language=it&query=${store.searchText} `
+         myUrl = `https://api.themoviedb.org/3/search/multi?${store.apiKey}&language=it&query=${store.searchText} `
       }
       
     axios
