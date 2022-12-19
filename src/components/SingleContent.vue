@@ -7,21 +7,21 @@
         return {
             arrayFlags: [
                 {
-                    img: "..flag/Flag_of_Italy.svg.png",
+                    img: "../assets/flag/Flag_of_Italy.svg.png",
                     lang: "it"
                 },
                 {
-                    img: "..flag/flag-en.png",
+                    img: "../assets/flag/flag-en.png",
                     lang: "en"
                 },
                 {
-                    img:"..flag/flag-ja.png",
+                    img:"../assets/flag/flag-ja.png",
                     lang: "ja"
                 },
                
                
                 {
-                    img: "..flag/rainbow.png",
+                    img: "../assets/flag/flag-rainbow.png",
                     lang: ""
                 }
             ]
@@ -38,6 +38,9 @@
             }
             return this.arrayFlags[this.arrayFlags.length - 1].img
         },
+        getVote(){
+            return Math.round(this.info.vote_average / 2);
+        }
    }
  }
 </script>
@@ -55,10 +58,10 @@
                         {{ info.original_name }}
                     </div>
                     <div >
-                        <img :src="getFlags" alt="" id="lingua">
+                        <img src="../assets/flag/flag-rainbow.png" alt="" id="lingua">
                     </div>
                     <div id="voto">
-                        {{info.vote_average}}
+                        {{ getVote }}
                     </div>
                 </div>
             
