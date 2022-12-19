@@ -31,7 +31,7 @@
    },
    computed:{
    getFlags(){
-    for (let i = 0; i < this.arrayFlags.length; i++) {
+    for (let i = 0 ; i < this.arrayFlags.length; i++) {
                 if (this.arrayFlags[i].lang.includes(this.info.original_language)) {
                     return this.arrayFlags[i].img
                 }
@@ -47,7 +47,7 @@
 
 <template>
     
-                <img :src="`https://image.tmdb.org/t/p/w342${info.poster_path}`" alt="">
+                <img :src="`https://image.tmdb.org/t/p/w500${info.poster_path}`" alt="">
                 <div class="info-title">
                     <div id="Titolo">
                         {{info.title}}
@@ -58,7 +58,7 @@
                         {{ info.original_name }}
                     </div>
                     <div >
-                        <img  :src="getFlags" alt="" id="lingua">
+                        <img :src="getFlags" alt="" id="lingua">
                     </div>
                     <span id="star" v-for="star in getVote" >
                         <font-awesome-icon icon="fa-solid fa-star"/>
