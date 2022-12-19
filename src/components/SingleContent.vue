@@ -31,12 +31,12 @@
    },
    computed:{
    getFlags(){
-    for (let i = 0; i < this. arrayFlags.length; i++) {
-                if (this. arrayFlags[i].lang.includes(this.info.original_language)) {
-                    return this. arrayFlags[i].img
+    for (let i = 0; i < this.arrayFlags.length; i++) {
+                if (this.arrayFlags[i].lang.includes(this.info.original_language)) {
+                    return this.arrayFlags[i].img
                 }
             }
-            return this. arrayFlags[this. arrayFlags.length - 1].img
+            return this.arrayFlags[this.arrayFlags.length - 1].img
         },
    }
  }
@@ -55,7 +55,7 @@
                         {{ info.original_name }}
                     </div>
                     <div >
-                        <img :src="getFlags" alt="">
+                        <img :src="getFlags" alt="" id="lingua">
                     </div>
                     <div id="voto">
                         {{info.vote_average}}
