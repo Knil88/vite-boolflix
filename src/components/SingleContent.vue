@@ -58,11 +58,12 @@
                         {{ info.original_name }}
                     </div>
                     <div >
-                        <img src="../assets/flag/flag-rainbow.png" alt="" id="lingua">
+                        <img  :src="getFlags" alt="" id="lingua">
                     </div>
-                    <div id="voto">
-                        {{ getVote }}
-                    </div>
+                    <span id="star" v-for="star in getVote" >
+                        <font-awesome-icon icon="fa-solid fa-star"/>
+                    </span >
+                   
                 </div>
             
            
@@ -71,5 +72,8 @@
 <style lang="scss">
     #lingua{
        max-width: 25px;
+    }
+    #star{
+        color: gold;
     }
 </style>
