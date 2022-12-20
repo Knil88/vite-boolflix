@@ -57,18 +57,26 @@ export default {
             {{info.original_title}}
             {{ info.original_name }}
         </div>
-        <div class="description">
-            {{ info.overview }}
-        </div>
         <div >
+           <div>
+            Lingua:
+           </div>
             <img :src="getFlags" alt="" id="lingua">
         </div>
+        <div>
+            Voto:
+        </div>
         <span id="star" v-for="star in getVote" >
+            
             <font-awesome-icon icon="fa-solid fa-star"/>
         </span >
         <span id="star" v-for="star in 5 - getVote" >
             <font-awesome-icon icon="fa-solid fa-star-half-stroke"/>
         </span >
+        <div class="description">
+            {{ info.overview }}
+        </div>
+       
        
     </div>
    
@@ -86,17 +94,27 @@ export default {
     }
     .info-title {
         position: absolute;
-        bottom: 70%;
-        width: 240px;
-        left: 5%;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 73%;
+        left: 13%;
+        bottom: 11px;
+        height: 356px;
+        padding: 20px;
+        opacity: 0;
+
+        &:hover{
+            opacity: 1;
+            cursor: pointer;
+        }
       }
     #layover{
         background-color: rgba(0, 0, 0, 0.5);
         position: relative;
         
     }
-    .description{
-        height: 30px;
+    .description {
+        height: 38%;
         overflow: auto;
-    }
+        margin: 21px 0px;
+      }
 </style>

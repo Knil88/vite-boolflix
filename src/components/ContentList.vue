@@ -42,25 +42,23 @@ import {store} from './store'
         width:100%;
         color: white;
         background: rgb(2,0,36);
+        padding-top: 90px;
        
          
 
         .big-card{
             text-align: center;
-            width: 19%;
-            
+            width: 24%;
+           
           
             
         }
 
     }
     img{
-        max-width: 230px;
+        max-height: 353px;
         margin: 10px;
     }
-   .big-card img :hover{
-    opacity: 0.5;
-
-   }
+  
    
 </style>

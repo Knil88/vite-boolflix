@@ -69,7 +69,9 @@ export default{
 
 <template>
     <header>
-      BOOLFLIX
+      <h2>
+        BOOLFLIX
+      </h2>
     <AppSearch  @search="getContent()"/>
     
     </header>
