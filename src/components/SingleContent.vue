@@ -45,8 +45,9 @@ export default {
 </script>
 
 <template>
-    
     <img :src="`https://image.tmdb.org/t/p/w342${info.poster_path}`" alt="">
+ <div id="layover">
+   
     <div class="info-title">
         <div id="Titolo">
             {{info.title}}
@@ -56,14 +57,22 @@ export default {
             {{info.original_title}}
             {{ info.original_name }}
         </div>
+        <div class="description">
+            {{ info.overview }}
+        </div>
         <div >
             <img :src="getFlags" alt="" id="lingua">
         </div>
         <span id="star" v-for="star in getVote" >
             <font-awesome-icon icon="fa-solid fa-star"/>
         </span >
+        <span id="star" v-for="star in 5 - getVote" >
+            <font-awesome-icon icon="fa-solid fa-star-half-stroke"/>
+        </span >
        
     </div>
+   
+ </div>
 
 
 </template>
@@ -74,5 +83,20 @@ export default {
     }
     #star{
         color: gold;
+    }
+    .info-title {
+        position: absolute;
+        bottom: 70%;
+        width: 240px;
+        left: 5%;
+      }
+    #layover{
+        background-color: rgba(0, 0, 0, 0.5);
+        position: relative;
+        
+    }
+    .description{
+        height: 30px;
+        overflow: auto;
     }
 </style>

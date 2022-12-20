@@ -58,6 +58,9 @@ import {store} from './store'
         max-width: 230px;
         margin: 10px;
     }
-   
+   .big-card img :hover{
+    opacity: 0.5;
+
+   }
    
 </style>
