@@ -5,10 +5,7 @@
     box-sizing: border-box;
 }
 
-body{
-    
 
-}
 
 header {
     padding: 25px;
@@ -20,6 +17,9 @@ header {
     width: 100%;
     z-index: 1000;
     font-family: sans-serif;
+    h2{
+        align-self: center;
+    }
   }
 main{
     

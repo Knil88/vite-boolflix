@@ -26,6 +26,7 @@ export default{
     if(store.searchText != "" ){
          myUrl = `https://api.themoviedb.org/3/search/multi?${store.apiKey}&language=it&query=${store.searchText} `
       }
+     
       
     axios
     
@@ -36,6 +37,7 @@ export default{
     .then(res =>{
 
       store.ContentList = res.data.results;
+      store.searchText = "";
     })
 
     //Con catch diciamo che ci sono stati degli errori 
