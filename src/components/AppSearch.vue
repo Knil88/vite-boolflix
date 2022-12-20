@@ -13,8 +13,8 @@
   
    <div id="input-container">
      
-    <input type="search" name="" id="input-search"  v-model="store.searchText" >
-    <button  @click="$emit('search')">
+    <input type="search" name="" id="input-search"  v-model="store.searchText" @keypress.enter="$emit('search')" >
+    <button  @click="$emit('search') ">
         Cerca
     </button>
    </div>
