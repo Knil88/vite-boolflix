@@ -50,10 +50,16 @@ export default {
    
     <div class="info-title">
         <div id="Titolo">
+          <div>
+            Titolo:
+          </div>
             {{info.title}}
             {{ info.name }}
         </div>
         <div id="titolo-originale">
+           <div>
+            Titolo orirginale:
+           </div>
             {{info.original_title}}
             {{ info.original_name }}
         </div>
@@ -74,6 +80,9 @@ export default {
             <font-awesome-icon icon="fa-solid fa-star-half-stroke"/>
         </span >
         <div class="description">
+            <div>
+                Trama:
+            </div>
             {{ info.overview }}
         </div>
        
@@ -101,6 +110,7 @@ export default {
         height: 356px;
         padding: 20px;
         opacity: 0;
+        font-family: sans-serif;
 
         &:hover{
             opacity: 1;
@@ -113,7 +123,7 @@ export default {
         
     }
     .description {
-        height: 38%;
+        height: 25%;
         overflow: auto;
         margin: 21px 0px;
       }

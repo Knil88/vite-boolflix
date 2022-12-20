@@ -17,9 +17,14 @@ header {
     width: 100%;
     z-index: 1000;
     font-family: sans-serif;
+    a{
+        text-decoration: none;
+        color: red;
+    }
     h2{
         align-self: center;
     }
+    
   }
 main{
     
