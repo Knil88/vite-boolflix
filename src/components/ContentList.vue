@@ -40,6 +40,8 @@ import {store} from './store'
         flex-wrap: wrap;
         margin: auto;
         width:100%;
+        height: 100vh;
+        overflow-y: scroll;
         color: white;
         background: rgb(2,0,36);
         padding-top: 90px;
